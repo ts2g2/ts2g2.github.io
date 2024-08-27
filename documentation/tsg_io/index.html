@@ -12,13 +12,13 @@
         <meta name="author" content="Joze Rozanec">
       
       
-        <link rel="canonical" href="https://timeseriestographs.com/documentation/strategy_linking_graph/">
+        <link rel="canonical" href="https://timeseriestographs.com/documentation/tsg_io/">
       
       
-        <link rel="prev" href="../strategy_to_time_sequence/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../strategy_linking_multi_graphs/">
+        <link rel="next" href="../model/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Graph linking strategy - ts2g2</title>
+        <title>Input/output - ts2g2</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#to_graph.strategy_linking_graph" class="md-skip">
+        <a href="#csv-and-xml-files" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Graph linking strategy
+              Input/output
             
           </span>
         </div>
@@ -248,7 +248,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../tsg_io/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -403,10 +403,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../tsg_io/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Input/output
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -415,6 +433,108 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#csv-and-xml-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Csv and xml files:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsg_io.input" class="md-nav__link">
+    <span class="md-ellipsis">
+      input
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsg_io.input.CsvFile" class="md-nav__link">
+    <span class="md-ellipsis">
+      CsvFile
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CsvFile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tsg_io.input.CsvFile.from_csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_csv
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsg_io.input.CsvRead" class="md-nav__link">
+    <span class="md-ellipsis">
+      CsvRead
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsg_io.input.FundamentalsReportFinancialStatements" class="md-nav__link">
+    <span class="md-ellipsis">
+      FundamentalsReportFinancialStatements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FundamentalsReportFinancialStatements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tsg_io.input.FundamentalsReportFinancialStatements.from_xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_xml
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsg_io.input.XmlRead" class="md-nav__link">
+    <span class="md-ellipsis">
+      XmlRead
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -466,28 +586,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Graph linking strategy
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../strategy_linking_graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -496,102 +598,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph" class="md-nav__link">
-    <span class="md-ellipsis">
-      strategy_linking_graph
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.LinkNodesWithinGraph" class="md-nav__link">
-    <span class="md-ellipsis">
-      LinkNodesWithinGraph
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="LinkNodesWithinGraph">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.LinkNodesWithinGraph.by_value" class="md-nav__link">
-    <span class="md-ellipsis">
-      by_value
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.LinkNodesWithinGraph.seasonalities" class="md-nav__link">
-    <span class="md-ellipsis">
-      seasonalities
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.StrategyLinkingGraph" class="md-nav__link">
-    <span class="md-ellipsis">
-      StrategyLinkingGraph
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.StrategyLinkingGraphBySeasonalities" class="md-nav__link">
-    <span class="md-ellipsis">
-      StrategyLinkingGraphBySeasonalities
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.StrategyLinkingGraphByValue" class="md-nav__link">
-    <span class="md-ellipsis">
-      StrategyLinkingGraphByValue
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.StrategyLinkingGraphByValueWithinRange" class="md-nav__link">
-    <span class="md-ellipsis">
-      StrategyLinkingGraphByValueWithinRange
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -691,37 +697,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph" class="md-nav__link">
+  <a href="#csv-and-xml-files" class="md-nav__link">
     <span class="md-ellipsis">
-      strategy_linking_graph
+      Csv and xml files:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.LinkNodesWithinGraph" class="md-nav__link">
+  <a href="#tsg_io.input" class="md-nav__link">
     <span class="md-ellipsis">
-      LinkNodesWithinGraph
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="LinkNodesWithinGraph">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.LinkNodesWithinGraph.by_value" class="md-nav__link">
-    <span class="md-ellipsis">
-      by_value
+      input
     </span>
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#tsg_io.input.CsvFile" class="md-nav__link">
+    <span class="md-ellipsis">
+      CsvFile
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CsvFile">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.LinkNodesWithinGraph.seasonalities" class="md-nav__link">
+  <a href="#tsg_io.input.CsvFile.from_csv" class="md-nav__link">
     <span class="md-ellipsis">
-      seasonalities
+      from_csv
     </span>
   </a>
   
@@ -733,36 +739,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.StrategyLinkingGraph" class="md-nav__link">
+  <a href="#tsg_io.input.CsvRead" class="md-nav__link">
     <span class="md-ellipsis">
-      StrategyLinkingGraph
+      CsvRead
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.StrategyLinkingGraphBySeasonalities" class="md-nav__link">
+  <a href="#tsg_io.input.FundamentalsReportFinancialStatements" class="md-nav__link">
     <span class="md-ellipsis">
-      StrategyLinkingGraphBySeasonalities
+      FundamentalsReportFinancialStatements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FundamentalsReportFinancialStatements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tsg_io.input.FundamentalsReportFinancialStatements.from_xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_xml
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.StrategyLinkingGraphByValue" class="md-nav__link">
-    <span class="md-ellipsis">
-      StrategyLinkingGraphByValue
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#to_graph.strategy_linking_graph.StrategyLinkingGraphByValueWithinRange" class="md-nav__link">
+  <a href="#tsg_io.input.XmlRead" class="md-nav__link">
     <span class="md-ellipsis">
-      StrategyLinkingGraphByValueWithinRange
+      XmlRead
     </span>
   </a>
   
@@ -783,13 +795,16 @@
                   
 
 
-  <h1>Graph linking strategy</h1>
+  <h1>Input/output</h1>
+
+<h2 id="csv-and-xml-files"><strong>Csv and xml files</strong>:</h2>
+
 
 <div class="doc doc-object doc-module">
 
 
 
-<a id="to_graph.strategy_linking_graph"></a>
+<a id="tsg_io.input"></a>
     <div class="doc doc-contents first">
 
 
@@ -807,17 +822,24 @@
 
 
 
-<h2 id="to_graph.strategy_linking_graph.LinkNodesWithinGraph" class="doc doc-heading">
-            <code>LinkNodesWithinGraph</code>
+<h2 id="tsg_io.input.CsvFile" class="doc doc-heading">
+            <code>CsvFile</code>
 
 
 </h2>
 
 
     <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="tsg_io.input.CsvRead" href="#tsg_io.input.CsvRead">CsvRead</a></code></p>
 
 
-      <p>Builder class for linking nodes within one graph, through which we can access linking strategies.</p>
+      <p>Returns proccessed data from csv file sorted by "Date".</p>
+<p><strong>Attributes:</strong></p>
+<ul>
+<li><code>path</code>: path to csv file with data</li>
+<li><code>column</code>: which column of data do we extract</li>
+</ul>
 
 
 
@@ -835,32 +857,116 @@
 <div class="doc doc-object doc-function">
 
 
-<h3 id="to_graph.strategy_linking_graph.LinkNodesWithinGraph.by_value" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">by_value</span><span class="p">(</span><span class="n">strategy</span><span class="p">)</span></code>
+<h3 id="tsg_io.input.CsvFile.from_csv" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">from_csv</span><span class="p">()</span></code>
 
 </h3>
 
 
     <div class="doc doc-contents ">
 
-      <p>Notes that we want to connect nodes based on values and strategy.</p>
+      <p>Extracts the data using set attributes.</p>
 
     </div>
 
 </div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="tsg_io.input.CsvRead" class="doc doc-heading">
+            <code>CsvRead</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>Extracts data from a csv file.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="tsg_io.input.FundamentalsReportFinancialStatements" class="doc doc-heading">
+            <code>FundamentalsReportFinancialStatements</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="tsg_io.input.XmlRead" href="#tsg_io.input.XmlRead">XmlRead</a></code></p>
+
+
+      <p>Extracting data from an xml file.
+Further explanation on file format can be found on:
+https://docs-2-0--quantrocket.netlify.app/data/reuters/</p>
+<p><strong>Attributes:</strong></p>
+<ul>
+<li><code>path</code>: path to csv file with data</li>
+<li><code>item</code>: which item are we observing</li>
+<li><code>season</code>: are we observing values annually or interim</li>
+</ul>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
 
 <div class="doc doc-object doc-function">
 
 
-<h3 id="to_graph.strategy_linking_graph.LinkNodesWithinGraph.seasonalities" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">seasonalities</span><span class="p">(</span><span class="n">period</span><span class="p">)</span></code>
+<h3 id="tsg_io.input.FundamentalsReportFinancialStatements.from_xml" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">from_xml</span><span class="p">()</span></code>
 
 </h3>
 
 
     <div class="doc doc-contents ">
 
-      <p>Notes that we want to connect based on seasonalities, ad sets the period parameter.</p>
+      <p>Extracts the data using set attributes.</p>
 
     </div>
 
@@ -878,8 +984,8 @@
 
 
 
-<h2 id="to_graph.strategy_linking_graph.StrategyLinkingGraph" class="doc doc-heading">
-            <code>StrategyLinkingGraph</code>
+<h2 id="tsg_io.input.XmlRead" class="doc doc-heading">
+            <code>XmlRead</code>
 
 
 </h2>
@@ -888,137 +994,7 @@
     <div class="doc doc-contents ">
 
 
-      <p>Links nodes within graph.</p>
-<p><strong>Attributes:</strong></p>
-<ul>
-<li><code>graph</code>: networkx.Graph object</li>
-<li><code>strategy_precedence</code>: tells in which order should the strategies be excetuted</li>
-</ul>
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="to_graph.strategy_linking_graph.StrategyLinkingGraphBySeasonalities" class="doc doc-heading">
-            <code>StrategyLinkingGraphBySeasonalities</code>
-
-
-</h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="to_graph.strategy_linking_graph.StrategyLinkingGraph" href="#to_graph.strategy_linking_graph.StrategyLinkingGraph">StrategyLinkingGraph</a></code></p>
-
-
-      <p>Links all nodes that are sequentially self.period apart.</p>
-<p><strong>Attributes:</strong></p>
-<ul>
-<li><code>period</code>: tells how far apart must two nodes be to be linked</li>
-</ul>
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="to_graph.strategy_linking_graph.StrategyLinkingGraphByValue" class="doc doc-heading">
-            <code>StrategyLinkingGraphByValue</code>
-
-
-</h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="to_graph.strategy_linking_graph.StrategyLinkingGraph" href="#to_graph.strategy_linking_graph.StrategyLinkingGraph">StrategyLinkingGraph</a></code></p>
-
-
-      <p>Links nodes based on their value.</p>
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="to_graph.strategy_linking_graph.StrategyLinkingGraphByValueWithinRange" class="doc doc-heading">
-            <code>StrategyLinkingGraphByValueWithinRange</code>
-
-
-</h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="to_graph.strategy_linking_graph.StrategyLinkingGraphByValue" href="#to_graph.strategy_linking_graph.StrategyLinkingGraphByValue">StrategyLinkingGraphByValue</a></code></p>
-
-
-      <p>Links nodes whose value difference is within range of allowed difference.</p>
-<p><strong>Attributes:</strong></p>
-<ul>
-<li><code>allowed_difference</code>: tells us the allowed difference between values of two nodes for the nodes to be linked together</li>
-</ul>
+      <p>Extracts data from an xml file.</p>
 
 
 

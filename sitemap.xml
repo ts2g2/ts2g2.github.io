@@ -16,11 +16,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://timeseriestographs.com/documentation/input_output/</loc>
-         <lastmod>2024-08-27</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://timeseriestographs.com/documentation/model/</loc>
          <lastmod>2024-08-27</lastmod>
          <changefreq>daily</changefreq>
@@ -42,6 +37,11 @@
     </url>
     <url>
          <loc>https://timeseriestographs.com/documentation/strategy_to_time_sequence/</loc>
+         <lastmod>2024-08-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://timeseriestographs.com/documentation/tsg_io/</loc>
          <lastmod>2024-08-27</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -16,7 +16,7 @@
       
       
       
-        <link rel="next" href="documentation/input_output/">
+        <link rel="next" href="documentation/tsg_io/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -246,7 +246,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="documentation/input_output/" class="md-tabs__link">
+        <a href="documentation/tsg_io/" class="md-tabs__link">
           
   
     
@@ -490,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/input_output/" class="md-nav__link">
+      <a href="documentation/tsg_io/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,24 +731,24 @@
 <h1 id="ts2g2">ts2g<sup>2</sup></h1>
 <p>TS2G<sup>2</sup> stands for "timeseries to graphs and back". The library implements a variety of strategies to convert timeseries into graphs, and convert graphs into sequences. Below, we provide a code snippet to generate a graph from timeseries:</p>
 <div class="highlight"><pre><span></span><code># load time series from a file
-timegraph = model.Timeseries(CsvStock(some_file_path, &quot;ColumnOfInterest&quot;).from_csv())\
+timegraph = Timeseries(CsvFile(amazon_path, &quot;Close&quot;).from_csv())\
 
 # and preprocess the timeseries with multiple preprocessing strategies
-.with_preprocessing(model.TimeseriesPreprocessingComposite()\
-    .add_strategy(model.TimeseriesPreprocessingSegmentation(60, 120))\
-    .add_strategy(model.TimeseriesPreprocessingSlidingWindow(5)))\
+.with_preprocessing(TimeseriesPreprocessingComposite()\
+    .add(TimeseriesPreprocessingSegmentation(60, 120))\
+    .add(TimeseriesPreprocessingSlidingWindow(5)))\
 
 # then create a graph from the timeseries, following a particular strategy
-.to_graph(tgs.BuildTimeseriesToGraphNaturalVisibilityStrategy().get_strategy())\
+.to_graph(BuildTimeseriesToGraphNaturalVisibilityStrategy().get_strategy())\
 
 # link graphs that result from the same timeseries, but at different sliding window frames
-.link(mgl.LinkGraphs().sliding_window())\
+.link(LinkGraphs().sliding_window())\
 
 # and combine identical graphs that result from the abovementioned time windows into single nodes
-.combine_identical_nodes_slid_win()\
+.combine_identical_subgraphs()\
 
 # finally, draw the graph
-.draw(&quot;red&quot;)
+.draw(&quot;blue&quot;)
 </code></pre></div>
 <p>For a more detailed example, look at the <a href="https://github.com/graph-massivizer/ts2g2/blob/main/tutorials/demo-ts2g2.ipynb">Amazon stocks demo</a>.</p>
 <p>Many of the methods implemented in this library are described in <em>Silva, Vanessa Freitas, et al. "Time series analysis via network science: Concepts and algorithms." Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery 11.3 (2021): e1404.</em> Nevertheless, the library also includes additional techniques found in other works from the scientific literature.</p>
@@ -957,9 +957,9 @@ The package is a joint effort between the <a href="https://www.ijs.si/">Jožef S
 
 <h3 id="graphs-to-timeseries-conversion">Graphs to timeseries conversion</h3>
 <p>Graphs are converted back to timeseries by sampling node values from the graph following different strategies. Below, we provide a short snippet of code, to illustrate how this can be done.</p>
-<div class="highlight"><pre><span></span><code>timegraph.to_sequence(model.ToSequenceVisitorSlidingWindow()\
-.next_node_strategy(tts.StrategySelectNextNodeRandomlyFromFirstGraph())\
-.next_value_strategy(tts.StrategyNextValueInNodeRandomForSlidingWindow().skip_every_x_steps(1))\
+<div class="highlight"><pre><span></span><code>timegraph.to_sequence(ToSequenceVisitorSlidingWindow()\
+.next_node_strategy(StrategySelectNextNodeRandomlyFromFirstGraph())\
+.next_value_strategy(StrategyNextValueInNodeRandomForSlidingWindow().skip_every_x_steps(1))\
 .ts_length(50))\
 .draw_sequence()
 </code></pre></div>
